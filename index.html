@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Instant Pay</title>
+		<title>Instant Bill Pay</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 		<link rel="stylesheet" href="assets/css/nav.css">
@@ -20,14 +20,23 @@
 				<div class="container">
 					<nav>
 						<div>
-							<a href="./index.html"><img src="assets/images/logo.png" alt=""></a>
+							<!-- <a href="./index.html"><img src="assets/images/logo.png" alt=""></a> -->
+							<a href="./index.html">
+								<h1>Instant Bill Pay</h1>
+							</a>
 						</div>
 						<div class="d-flex align-items-center">
 							<ul id="primary-navigation" class="primary-navigation flex">
 								<li class="nav__item">
-									<a href="" class="nav__link">
+									<a href="#" class="nav__link  dropdown-toggle">
 										Solutions
 									</a>
+									<ul class="dropdown-menu dropdown-menu-dark"
+										aria-labelledby="navbarDarkDropdownMenuLink">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li><a class="dropdown-item" href="#">Something else here</a></li>
+									</ul>
 								</li>
 								<li class="nav__item">
 									<a href="" class="nav__link">
@@ -67,7 +76,7 @@
 			</div>
 			<div class="container">
 
-				<div class="hero__wrapper pt-5 px-5">
+				<div class="hero__wrapper">
 					<div class="caption hero__info">
 						<h1>
 							<span>Enabling Payments Without Boundaries</span>
@@ -86,7 +95,7 @@
 						</div>
 					</div>
 					<div class="hero__image">
-						<img src="./assets/images/payment-cards.png" alt="Payment Cards">
+						<img src="./assets/images/payment-cards.png" class="img-fluid" alt="Payment Cards">
 					</div>
 				</div>
 
@@ -120,7 +129,7 @@
 		</div>
 
 
-		<section class="mt-5">
+		<section>
 			<div class="other-solution">
 				<h1>
 					Looking for <br>
@@ -133,6 +142,8 @@
 				<a href="#" class="btn btn-primary">Read more</a>
 			</div>
 		</section>
+
+
 
 		<section class="p-0">
 			<div class="payment-experience">
