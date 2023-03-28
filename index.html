@@ -14,14 +14,38 @@
 	</head>
 
 	<body>
-		<header>
+
+		<header class="hero">
 			<div class="navigation">
 				<div class="container">
 					<nav>
 						<div>
 							<a href="./index.html"><img src="assets/images/logo.png" alt=""></a>
 						</div>
-
+						<div class="d-flex align-items-center">
+							<ul id="primary-navigation" class="primary-navigation flex">
+								<li class="nav__item">
+									<a href="" class="nav__link">
+										Solutions
+									</a>
+								</li>
+								<li class="nav__item">
+									<a href="" class="nav__link">
+										Price
+									</a>
+								</li>
+								<li class="nav__item">
+									<a href="" class="nav__link">
+										About
+									</a>
+								</li>
+								<li class="nav__item">
+									<a href="" class="nav__link">
+										Resources
+									</a>
+								</li>
+							</ul>
+						</div>
 						<div style="display: flex; align-items: center;">
 
 							<ul id="primary-navigation" class="primary-navigation flex">
@@ -41,9 +65,36 @@
 					</nav>
 				</div>
 			</div>
+			<div class="container">
+
+				<div class="hero__wrapper pt-5 px-5">
+					<div class="caption hero__info">
+						<h1>
+							<span>Enabling Payments Without Boundaries</span>
+						</h1>
+						<div class="hero__sub-heading">
+							providing payment service and infrastructure that
+							allow you collect payments across Africa
+						</div>
+						<div class="btn-group" role="group" aria-label="Default button group">
+							<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signUpModal">
+								Sign Up
+							</button>
+							<button class="btn btn-outline-primary">
+								Contact Us
+							</button>
+						</div>
+					</div>
+					<div class="hero__image">
+						<img src="./assets/images/payment-cards.png" alt="Payment Cards">
+					</div>
+				</div>
+
+
+			</div>
 		</header>
 
-		<div class="sideBarNav">
+		<div id="sideBarNav" class="sideBarNav">
 			<ul class="nav-menu">
 				<li class="nav-item">
 					<i class="bi bi-speedometer2"></i>
@@ -69,249 +120,132 @@
 		</div>
 
 
-		<div class="dashboard container">
-			<section class="main pt-4">
-
-
-				<h1>Dashboard</h1>
-				<div>
-					<aside class="sidePanel">
-
-					</aside>
-					<div class="insights">
-						<div class="sales">
-							<span><i class="bi bi-wallet2"></i></span>
-							<div class="middle">
-								<div class="left">
-									<h3>Wallet</h3>
-									<h1>₦25,024</h1>
-								</div>
-								<div class="progress">
-									<svg>
-										<circle cx="38" cy="38" r="36"></circle>
-									</svg>
-									<div class="number">
-										<p>81%</p>
-									</div>
-								</div>
-							</div>
-							<small class="text-muted"><a href="#">Fund Wallet</a></small>
-						</div>
-
-						<div class="expenses">
-							<span><i class="bi bi-wallet2"></i></span>
-							<div class="middle">
-								<div class="left">
-									<h3>Wallet</h3>
-									<h1>₦25,024</h1>
-								</div>
-								<div class="progress">
-									<svg>
-										<circle cx="38" cy="38" r="36"></circle>
-									</svg>
-									<div class="number">
-										<p>62%</p>
-									</div>
-								</div>
-							</div>
-							<small class="text-muted"><a href="#">Fund Wallet</a></small>
-						</div>
-
-						<div class="income">
-							<span><i class="bi bi-briefcase"></i></span>
-							<div class="middle">
-								<div class="left">
-									<h3>Transactions</h3>
-									<h1>24 <span class="text-muted">Transaction(s)</span></h1>
-								</div>
-								<div class="progress">
-									<svg>
-										<circle cx="38" cy="38" r="36"></circle>
-									</svg>
-									<div class="number">
-										<p>44%</p>
-									</div>
-								</div>
-							</div>
-							<small class="text-muted"><a href="#">Last 24 Hours</a></small>
-						</div>
-
-						<!-- <div class="expenses">
-											<span class="material-icons-sharp">
-												bar_chart
-											</span>
-											<div class="middle">
-												<div class="left">
-													<h3>Total Expenses</h3>
-													<h1>$14,160</h1>
-												</div>
-												<div class="progress">
-													<svg>
-														<circle cx="38" cy="38" r="36"></circle>
-													</svg>
-													<div class="number">
-														<p>62%</p>
-													</div>
-												</div>
-											</div>
-											<small class="text-muted">Last 24 Hours</small>
-										</div>
-					
-										<div class="income">
-											<span class="material-icons-sharp">
-												stacked_line_chart
-											</span>
-											<div class="middle">
-												<div class="left">
-													<h3>Total ncome</h3>
-													<h1>$10,864</h1>
-												</div>
-												<div class="progress">
-													<svg>
-														<circle cx="38" cy="38" r="36"></circle>
-													</svg>
-													<div class="number">
-														<p>44%</p>
-													</div>
-												</div>
-											</div>
-											<small class="text-muted">Last 24 Hours</small>
-										</div> -->
-					</div>
-
-					<div class="recent-orders">
-						<h2>Recent Orders</h2>
-						<table>
-							<thead>
-								<tr>
-									<th>Transaction Type</th>
-									<th>Transaction ID</th>
-									<th>Amount/Price</th>
-									<th>Status</th>
-									<th></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Foldable Mini Drone</td>
-									<td>85631</td>
-									<td>Due</td>
-									<td class="warning">Pending</td>
-									<td class="primary">Details</td>
-								</tr>
-								<tr>
-									<td>Foldable Mini Drone</td>
-									<td>85631</td>
-									<td>Due</td>
-									<td class="warning">Pending</td>
-									<td class="primary">Details</td>
-								</tr>
-								<tr>
-									<td>Foldable Mini Drone</td>
-									<td>85631</td>
-									<td>Due</td>
-									<td class="warning">Pending</td>
-									<td class="primary">Details</td>
-								</tr>
-								<tr>
-									<td>Foldable Mini Drone</td>
-									<td>85631</td>
-									<td>Due</td>
-									<td class="warning">Pending</td>
-									<td class="primary">Details</td>
-								</tr>
-								<tr>
-									<td>Foldable Mini Drone</td>
-									<td>85631</td>
-									<td>Due</td>
-									<td class="warning">Pending</td>
-									<td class="primary">Details</td>
-								</tr>
-							</tbody>
-						</table>
-						<a href="#">Show All</a>
-					</div>
+		<section class="mt-5">
+			<div class="other-solution">
+				<h1>
+					Looking for <br>
+					more solutions?
+				</h1>
+				<div class="pt-2 mb-5">
+					<span>Instant Pay</span> offers solutions for you to pay your bill and utilities
+					easily and more securely online
 				</div>
+				<a href="#" class="btn btn-primary">Read more</a>
+			</div>
+		</section>
 
-			</section>
-			<div class="right">
+		<section class="p-0">
+			<div class="payment-experience">
+				<div class="payment-image">
 
-
-				<div class="recent-updates">
-					<h2>Recent Updates</h2>
-					<div class="updates">
-						<div class="update">
-							<div class="profile-photo">
-								<img src="./assets/images/profile2.png" alt="">
-							</div>
-							<div class="message">
-								<p>
-									<b>Mike Okocha</b>
-									received his airtime gift
-								</p>
-								<small class="text-muted">2 Minutes Ago</small>
-							</div>
-						</div>
-
-						<div class="update">
-							<div class="profile-photo">
-								<img src="./assets/images/profile3.png" alt="">
-							</div>
-							<div class="message">
-								<p>
-									<b>Mike Okocha</b>
-									received his data gift
-								</p>
-								<small class="text-muted">2 Minutes Ago</small>
-							</div>
-						</div>
-
-					</div>
 				</div>
-				<!-- --------------- END OF RECENT UPDATES --------------- -->
-				<div class="sales-analytics">
-					<h2>Sale Analytics</h2>
-					<div class="item online">
-						<div class="icon">
-							<!-- <span class="material-icons-sharp"> shopping_cart </span> -->
-							<span class="bi bi-cart3"></span>
-						</div>
-						<div class="right">
-							<div class="info">
-								<h3>ONLINE ORDERS</h3>
-								<small class="text-muted">Last 24 Hours</small>
-							</div>
-							<h5 class="success"> +39% </h5>
-							<h3>3849</h3>
-						</div>
-					</div>
-					<div class="item offline">
-						<div class="icon">
-							<span class="bi bi-bag"></span>
-						</div>
-						<div class="right">
-							<div class="info">
-								<h3>OFFLINE ORDERS</h3>
-								<small class="text-muted">Last 24 Hours</small>
-							</div>
-							<h5 class="danger"> -17% </h5>
-							<h3>1100</h3>
-						</div>
-					</div>
-
-					<div class="item add-product">
-						<div onclick="window.open('#','_self')">
-							<span class="bi bi-plus-circle-dotted"></span>
-							<h3>Add Analytics</h3>
-						</div>
+				<div class="payment-text-section">
+					<div class="payment-text">
+						<h1>
+							Your payment <br>
+							experience anytime, <br>
+							anywhere
+						</h1>
+						<p>
+							Get your money moving with our simple to use,
+							accessible payment app.
+						</p>
+						<ul>
+							<li>Bill payment</li>
+							<li>Airtime to cash</li>
+							<li>etc.</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
+		<section>
+			<div class="section-hdr">
+				<h1>Everything you need to know before getting started</h1>
+			</div>
+			<div class="container">
+
+
+				<div class="row" data-masonry='{"percentPosition": true }'>
+					<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">What are the requirements for using Instant Pay?</h5>
+								<p class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to additional content. This content is a little bit longer.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">How does Instant Pay handle my privacy?</h5>
+								<p class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to additional content. This content is a little bit longer.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">What are the requirements for using Instant Pay?</h5>
+								<p class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to additional content. This content is a little bit longer.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">What are the requirements for using Instant Pay?</h5>
+								<p class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to additional content. This content is a little bit longer.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">How does Instant Pay handle my privacy?</h5>
+								<p class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to additional content. This content is a little bit longer.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">How does Instant Pay handle my privacy?</h5>
+								<p class="card-text">
+									This is a longer card with supporting text below as a natural
+									lead-in to additional content. This content is a little bit longer.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="d-flex flex-column justify-content-center text-center pt-5">
+					Have more questions? <br /> <a href="#">Ask your question here</a>
+				</div>
+
+
+			</div>
+		</section>
 
 		<section class="footer pt-1 pb-1" style="padding: 0;">
-			<div class="container d-md-flex d-block justify-content-sm-center">
+			<div class="container d-md-flex d-block justify-content-sm-center justify-content-sm-between">
 				<div class="copyright">
 					© 2023 Instant Pay. All Rights Reserved
 				</div>
@@ -350,12 +284,16 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-primary w-100">Login</button>
+						<button type="button" class="btn btn-primary w-100"
+							onClick="window.location.href='./dashboard.html';">
+							Login
+						</button>
+
 					</div>
 					<div style="display:block; text-align: center;">
 						<a href="#" class="forgot-password">Forgot Password</a>
 						<div>
-							New to Bills9Ja? <a href="#" class="signUp-login">Sign Up Here</a>
+							New to Instant Pay? <a href="#" class="signUp-login">Sign Up Here</a>
 						</div>
 					</div>
 				</div>
@@ -369,7 +307,8 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<h1 class="modal-title" id="signUpModalLabel">Register</h1>
-						<div style="font-size: 0.85rem;">Welcome to Bills9Ja portal, register to access various products
+						<div style="font-size: 0.85rem;">Welcome to Instant Pay portal, register to access various
+							products
 						</div>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
@@ -655,7 +594,6 @@
 							<input type="text" class="form-control" id="howMuchSending"
 								placeholder="SmartCard/Decoder(ICU) Number">
 						</div>
-
 						<div class="mb-3">
 							<select name="plan" id="plan" class="form-select" required="">
 								<option value="">Select Package</option>
@@ -666,18 +604,12 @@
 								<option value="gotv-jolli-2460">Gotv Jolli - #2,460</option>
 							</select>
 						</div>
-
-
-
 						<div class="input-group mb-3">
 							<span class="input-group-text" id="currency-addon">₦</span>
 							<input type="text" class="form-control" placeholder="Amount" aria-label="Amount"
 								aria-describedby="currency-addon">
 						</div>
-
 						<!--  -->
-
-
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
@@ -760,14 +692,6 @@
 		<script src="assets/js/main.js"></script>
 
 		<script>
-
-
-
-
-
-
-
-
 		</script>
 	</body>
 
