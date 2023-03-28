@@ -52,6 +52,11 @@ b {
 	color: var(--tt-dark);
 }
 
+img {
+	display: inline-block;
+	max-width: 100%;
+}
+
 .primary {
 	color: var(--tt-primary);
 }
@@ -145,7 +150,7 @@ img {
 
 .hero {
 	width: 100%;
-	height: 90vh;
+	height: 100vh;
 	/* background-color: #F5FAFF; */
 	background-color: #f9f1f1;
 	background-repeat: no-repeat;
@@ -156,10 +161,6 @@ img {
 .hero__wrapper {
 	margin: 0 auto;
 	max-width: 109.2rem;
-	/* align-items: flex-start;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between; */
 	display: -ms-grid;
 	display: grid;
 	-webkit-box-orient: vertical;
@@ -177,12 +178,30 @@ img {
 	-ms-flex-align: start;
 	align-items: start;
 	grid-auto-columns: 1fr;
-	grid-column-gap: 40px;
+	grid-column-gap: 20px;
 	grid-row-gap: 20px;
-	-ms-grid-columns: 1.25fr 1fr;
-	grid-template-columns: 1.25fr 1fr;
+	-ms-grid-columns: 1fr 1.25fr;
+	grid-template-columns: 1fr 1.25fr;
 	-ms-grid-rows: auto;
 	grid-template-rows: auto;
+}
+
+@media screen and (max-width: 991px) {
+	.hero__wrapper {
+		grid-template-columns: 1fr;
+		padding-top: 4rem;
+	}
+
+	#w-node-_4910a168-5990-b284-9182-9494703dfbd3-2f6da379 {
+		-ms-grid-column: span 3;
+		grid-column-start: span 3;
+		-ms-grid-column-span: 3;
+		grid-column-end: span 3;
+		-ms-grid-row: span 1;
+		grid-row-start: span 1;
+		-ms-grid-row-span: 1;
+		grid-row-end: span 1;
+	}
 }
 
 .home-header-content {
@@ -234,6 +253,25 @@ img {
 	grid-row-end: span 1;
 	-ms-grid-column-align: end;
 	justify-self: end;
+	transition: all 300ms ease;
+}
+
+@media screen and (max-width: 991px) {
+
+	.hero__image {
+		-ms-grid-column: span 3;
+		grid-column-start: span 3;
+		-ms-grid-column-span: 3;
+		grid-column-end: span 3;
+		-ms-grid-row: span 1;
+		grid-row-start: span 1;
+		-ms-grid-row-span: 1;
+		grid-row-end: span 1;
+	}
+}
+
+.hero__image img {
+	width: auto;
 }
 
 .hero__sub-heading {
@@ -275,21 +313,18 @@ img {
 
 @media (max-width: 769px) {
 	.hero .caption {
-		width: 390px;
+		padding: 15px;
+		grid-column-start: span 3;
+		-ms-grid-column-span: 3;
+		grid-column-end: span 3;
+		-ms-grid-row: span 1;
+		grid-row-start: span 1;
+		-ms-grid-row-span: 1;
+		grid-row-end: span 1;
 	}
 
 	.hero .caption h1 {
-		font-size: 1.75rem;
-		line-height: 2rem;
-	}
-}
-
-@media (max-width: 576px) {
-	.hero .caption {
-		width: 300px;
-		padding: 15px;
-		background: rgba(255, 255, 255, 0.85);
-		transform: translate(-20%, -90%);
+		line-height: 1.15;
 	}
 }
 
