@@ -1,0 +1,81 @@
+:root {
+	--tt-blue: #0d6efd;
+	--tt-indigo: #6610f2;
+	--tt-purple: #683A91;
+	--tt-pink: #d63384;
+	--tt-red: #dc3545;
+	--tt-orange: #fd7e14;
+	--tt-yellow: #ffc107;
+	--tt-green: #198754;
+	--tt-teal: #20c997;
+	--tt-cyan: #0dcaf0;
+	--tt-white: #fff;
+	--tt-gray: #6c757d;
+	--tt-gray-dark: #343a40;
+	--tt-gray-100: #f8f9fa;
+	--tt-gray-200: #e9ecef;
+	--tt-gray-300: #dee2e6;
+	--tt-gray-400: #ced4da;
+	--tt-gray-500: #adb5bd;
+	--tt-gray-600: #6c757d;
+	--tt-gray-700: #495057;
+	--tt-gray-800: #343a40;
+	--tt-gray-900: #212529;
+	--tt-primary: #0d6efd;
+	--tt-secondary: #6c757d;
+	--tt-success: #198754;
+	--tt-info: #0dcaf0;
+	--tt-warning: #ffc107;
+	--tt-danger: #dc3545;
+	--tt-light: #f8f9fa;
+	--tt-dark: #212529;
+	--tt-primary-rgb: 13, 110, 253;
+	--tt-secondary-rgb: 108, 117, 125;
+	--tt-success-rgb: 25, 135, 84;
+	--tt-info-rgb: 13, 202, 240;
+	--tt-warning-rgb: 255, 193, 7;
+	--tt-danger-rgb: 220, 53, 69;
+	--tt-light-rgb: 248, 249, 250;
+	--tt-dark-rgb: 33, 37, 41;
+	--tt-white-rgb: 255, 255, 255;
+	--tt-black-rgb: 0, 0, 0;
+	--tt-body-rgb: 33, 37, 41;
+	--tt-font-montserrat: 'Montserrat';
+	--tt-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--tt-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	--tt-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+	--tt-body-font-family: var(--tt-font-montserrat);
+	--tt-body-font-size: 1rem;
+	--tt-body-font-weight: 400;
+	--tt-body-line-height: 1.5;
+	--tt-body-color: #212529;
+	/* --tt-body-bg: #fff; #f6f6f9 */
+	--tt-body-bg: #f6f6f9;
+	--tt-box-shadow: 0 2rem 3rem rgb(132 139 200 / 18%);
+
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	:root {
+		scroll-behavior: smooth;
+	}
+}
+
+body {
+	margin: 0;
+	font-family: var(--tt-body-font-family);
+	font-size: var(--tt-body-font-size);
+	font-weight: var(--tt-body-font-weight);
+	line-height: var(--tt-body-line-height);
+	color: var(--tt-body-color);
+	text-align: var(--tt-body-text-align);
+	background-color: var(--tt-body-bg);
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
