@@ -37,7 +37,8 @@ function sidemenu() {
 //   }
 // })
 
-const today = new Date()
+/* const today = new Date()
 const year = today.getFullYear()
 
-document.getElementById('copyright').innerHTML = year
+document.getElementById('copyright').innerHTML = year()
+ */
