@@ -35,25 +35,27 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 15px 0;
+	padding: 20px 0;
 }
 
 nav ul {
 	padding: 0;
-	display: flex;
-	align-items: center;
+	/* display: flex;
+	align-items: center; */
 }
 
 nav ul li {
-	font-size: 1rem;
+	font-size: 0.85rem;
 	font-weight: 400;
 }
 
-/* nav ul li:last-child {
+/* 
+nav ul li:last-child {
 	padding: 5px 10px;
 	background-color: #a70d02;
 	border-radius: 20px;
-} */
+} 
+*/
 
 nav ul li a {
 	padding: 0 15px;
@@ -146,7 +148,12 @@ nav ul li a {
 	cursor: pointer;
 }
 
+/*
 .sideBarNav {
+	right: 0px;
+}
+
+.sideBarNav.active {
 	position: fixed;
 	right: -300px;
 	top: 0;
@@ -156,13 +163,32 @@ nav ul li a {
 	padding: 5rem 1.5rem 3rem;
 	flex-direction: column;
 	background-color: #a70d02;
-	/* border-radius: 10px; */
+	transition: 0.3s;
+	box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+}
+*/
+.sideBarNav {
+	display: grid;
+	/* 
+	position: fixed;
+	right: -300px; */
+	top: 0;
+	z-index: 11;
+	width: 300px;
+	height: 100vh;
+	/* padding: 5rem 1.5rem 2rem; */
+	padding: 5rem 0 2rem;
+	flex-direction: column;
+	background-color: #a70d02;
 	transition: 0.3s;
 	box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
 }
 
+.sideBarNav.close {
+	right: 0px;
+}
+
 .sideBarNav.active {
-	/* transform: translateX(0px); */
 	right: 0px;
 }
 
@@ -177,10 +203,13 @@ nav ul li a {
 .sideBarNav .nav-menu .nav-item {
 	list-style: none;
 	line-height: 1.25;
-	padding: 15px 10px;
+	/* padding: 15px 10px; */
+	padding: 15px 10px 15px 1.5rem;
 	display: flex;
 	color: #fff;
 }
+
+
 
 .sideBarNav .nav-menu .nav-item:last-child {
 	position: absolute;
@@ -190,8 +219,23 @@ nav ul li a {
 .sideBarNav .nav-menu .nav-item .nav-link {
 	color: #fff;
 	padding-left: 30px;
-	font-size: 14px;
+	font-size: 1rem;
 }
+
+.sideBarNav .nav-menu .nav-item:hover,
+.sideBarNav .nav-menu .nav-item:hover .nav-link {
+	background-color: #fff;
+}
+
+.sideBarNav .nav-menu .nav-item.active,
+.sideBarNav .nav-menu .nav-item.active .nav-link,
+.sideBarNav .nav-menu .nav-item:hover,
+.sideBarNav .nav-menu .nav-item:hover .nav-link {
+	color: #a70d02;
+	background-color: #fff;
+	font-weight: 500;
+}
+
 
 .nav-burger.open .icon:before {
 	background-color: #fff;

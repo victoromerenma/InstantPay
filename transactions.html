@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Dashboard | Instant Bill Pay</title>
+		<title>Transactions | Instant Bill Pay</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 		<link rel="stylesheet" href="assets/css/nav.css">
@@ -19,11 +19,11 @@
 
 					<div class="sideBarNav">
 						<ul class="nav-menu">
-							<li class="nav-item active">
+							<li class="nav-item">
 								<i class="bi bi-speedometer2"></i>
 								<a href="./dashboard.html" class="nav-link">Dashboard</a>
 							</li>
-							<li class="nav-item">
+							<li class="nav-item active">
 								<i class="bi bi-briefcase"></i>
 								<a href="./transactions.html" class="nav-link">Transactions</a>
 							</li>
@@ -58,66 +58,24 @@
 						<div class="dashboard_Header__Section">
 							<div class="topbar">
 								<div class="page__Title">
-									<h1>Overview</h1>
+									<h1>Transactions</h1>
 								</div>
 								<div class="report__Date">
 									<select name="" id="" class="form-select">
-										<option value="">Today</option>
-										<option value="">Yesterday</option>
-										<option value="">Last 7 Days</option>
-										<option value="">Last 30 Days</option>
+										<option value="">Filter</option>
 									</select>
-
-									<div class="form-control">
-										Apr 12,2023
-									</div>
-									<div class="form-control">
-										Apr 19,2023
-									</div>
-
-									<!-- <div class="btn-group" role="group" aria-label="Default button group">
-										<button class="btn btn-outline-secondary">
-											Apr 12,2023
-										</button>
-										<button class="btn btn-outline-secondary">
-											Apr 19,2023
-										</button>
-									</div> -->
+									<input placeholder="Search" class="form-control" />
 								</div>
 							</div>
 						</div>
-						<div class="dashboard_Body__Section iborder-1">
+						<div class="transaction_Body__Section">
 							<div class="page__Body">
-								<div class="row overview__Container">
-									<div class="d-flex col-sm-12 col-md-8 col-lg-8">
-										<div id="no_Data" class="empty__Content justify-content-center">
-											No data to show
-										</div>
-									</div>
-									<div class="col-12 col-sm-12 col-md-4 col-lg-4">
-										<div class="figures">
-											<div class="small_font">Total Value</div>
-											<div class="total__Value">
-												NGN 0.00
-											</div>
-											<div class="total__Value_Detail">
-												<div class="small_font">
-													Total Volume
-												</div>
-												<div class="total__Volume">
-													0
-												</div>
-
-											</div>
-											<div class="divider"></div>
-											<div class="total__Value_Detail">
-												<div class="small_font">
-													Total Volume
-												</div>
-												<div class="total__Value">
-													NGN 0.00
-												</div>
-											</div>
+								<div class="row transaction__Container">
+									<div class="d-flex col-sm-12 col-md-12 col-lg-12">
+										<div id="no_Transaction" class="empty__Transaction justify-content-center">
+											<h2>
+												You have no transactions in the last 30 days, but you can change that.
+											</h2>
 										</div>
 									</div>
 								</div>

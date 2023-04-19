@@ -10,19 +10,19 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 		<link rel="stylesheet" href="assets/css/nav.css">
 		<link rel="stylesheet" href="assets/css/stylesheet.css">
+		<link rel="stylesheet" href="assets/css/countrySelect.css">
 
 	</head>
 
-	<body>
+	<body class="login">
 
 		<header class="hero">
 			<div class="navigation">
 				<div class="container">
 					<nav>
 						<div>
-							<!-- <a href="./index.html"><img src="assets/images/logo.png" alt=""></a> -->
 							<a href="./index.html">
-								<h1>Instant Bill Pay</h1>
+								<h1 style="font-size: 1.35rem;">Instant Bill Pay</h1>
 							</a>
 						</div>
 						<div class="d-flex align-items-center">
@@ -59,7 +59,30 @@
 								</li>
 							</ul>
 						</div>
-						<div style="display: flex; align-items: center;">
+						<div class="d-flex align-items-center">
+
+							<form>
+								<div class="form-item">
+									<input id="country_selector" type="text">
+									<label for="country_selector" style="display:none;">Select a country here...</label>
+								</div>
+
+								<div class="form-item" style="display:none;">
+									<input type="text" id="country_selector_code" name="country_selector_code"
+										data-countrycodeinput="1" readonly="readonly"
+										placeholder="Selected country code will appear here" />
+
+									<label for="country_selector_code">
+										...and the selected country code will be updated
+										here
+									</label>
+								</div>
+
+								<button type="submit" style="display:none;">Submit</button>
+							</form>
+
+
+
 
 							<ul id="primary-navigation" class="primary-navigation flex">
 								<li class="nav__item">
@@ -68,7 +91,6 @@
 									</a>
 								</li>
 							</ul>
-
 
 							<div class="menu nav-burger d-sm-block d-md-none d-lg-none" data-menu="15">
 								<div class="icon"></div>
@@ -323,36 +345,38 @@
 			aria-labelledby="loginModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title" id="loginModalLabel">Hello, Welcome Back</h1>
-						<div style="font-size: 0.85rem;">
-							Donec rutrum congue leo eget malesuada. Mauris
-							blandit aliquet elit, eget tincidunt nibh pulvinar
+					<form action="/dashboard.html" class="loginForm">
+						<div class="modal-header">
+							<h1 class="modal-title" id="loginModalLabel">Hello, Welcome Back</h1>
+							<div style="font-size: 0.85rem;">
+								Welcome to Instant Pay portal, register to access various products
+							</div>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<div class="mb-3">
-							<input type="email" class="form-control" id="email_mobileNumber"
-								placeholder="Email or Mobile Number">
+						<div class="modal-body">
+							<div class="mb-3">
+								<input type="email" class="form-control" id="email_mobileNumber"
+									placeholder="Email or Mobile Number">
+							</div>
+							<div class="mb-3">
+								<input type="password" class="form-control" id="loginPpass" placeholder="Password">
+							</div>
 						</div>
-						<div class="mb-3">
-							<input type="password" class="form-control" id="password" placeholder="Password">
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary w-100"
-							onClick="window.location.href='./dashboard.html';">
-							Login
-						</button>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary w-100"
+								onClick="window.location.href='./dashboard.html';">
+								Login
+							</button>
 
-					</div>
-					<div style="display:block; text-align: center;">
-						<a href="#" class="forgot-password">Forgot Password</a>
-						<div>
-							New to Instant Pay? <a href="#" class="signUp-login">Sign Up Here</a>
 						</div>
-					</div>
+						<div style="display:block; text-align: center;">
+							<a href="#" class="forgot-password">Forgot Password</a>
+							<div>
+								New to Instant Pay? <a href="#" class="signUp-login" data-bs-toggle="modal"
+									data-bs-target="#signUpModal">Sign Up Here</a>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -381,7 +405,7 @@
 							<input type="email" class="form-control" id="emailAddress" placeholder="Email Address">
 						</div>
 						<div class="mb-3 d-flex justify-content-between align-items-center" style="gap: 1rem;">
-							<input type="password" class="form-control" id="password" placeholder="Password">
+							<input type="password" class="form-control" id="assword" placeholder="Password">
 							<input type="password" class="form-control" id="confirmPassword"
 								placeholder="Confirm Password">
 						</div>
@@ -398,357 +422,23 @@
 			</div>
 		</div>
 
-		<!--Airtime Recharge Modal -->
-		<div class="modal fade" id="airtimeRecharge_Modal" data-bs-backdrop="static" data-bs-keyboard="false"
-			tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title" id="signUpModalLabel">Recharge your mobile</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
 
-						<div class="mb-3">
-							<input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
-						</div>
-						<div class="mb-3">
-							<div class="network">
-								<div class="form-check form-check-inline">
-									<input class="mtn form-check-input" type="radio" name="inlineRadioOptions" id="mtn"
-										value="mtn">
-									<!-- <label class="form-check-label" for="inlineRadio1">1</label> -->
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="airtel form-check-input" type="radio" name="inlineRadioOptions"
-										id="airtel" value="airtel">
-									<!-- <label class="form-check-label" for="inlineRadio2">2</label> -->
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="glo form-check-input" type="radio" name="inlineRadioOptions" id="glo"
-										value="glo">
-									<!-- <label class="form-check-label" for="inlineRadio3">3</label> -->
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="_9mobile form-check-input" type="radio" name="inlineRadioOptions"
-										id="_9mobile" value="9Mobile">
-									<!-- <label class="form-check-label" for="inlineRadio4">4</label> -->
-								</div>
-							</div>
-						</div>
-						<div class="mb-3">
-							<input type="amount" class="form-control" id="amount" placeholder="Amount">
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-							data-bs-target="#paymentCardModal">Proceed</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!--Data Recharge Modal -->
-		<div class="modal fade" id="dataRecharge_Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-			aria-labelledby="dataRechargeModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title" id="dataRechargeModalLabel">Buy Mobile Data</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-
-						<div class="mb-3">
-							<input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
-						</div>
-
-						<div class="mb-3">
-							<label for="networkProvider" class="form-label">Choose Network Provider</label>
-							<div class="network">
-								<div class="form-check form-check-inline">
-									<input class="mtn form-check-input" type="radio" name="inlineRadioOptions" id="mtn"
-										value="mtn">
-									<!-- <label class="form-check-label" for="inlineRadio1">1</label> -->
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="airtel form-check-input" type="radio" name="inlineRadioOptions"
-										id="airtel" value="airtel">
-									<!-- <label class="form-check-label" for="inlineRadio2">2</label> -->
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="glo form-check-input" type="radio" name="inlineRadioOptions" id="glo"
-										value="glo">
-									<!-- <label class="form-check-label" for="inlineRadio3">3</label> -->
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="_9mobile form-check-input" type="radio" name="inlineRadioOptions"
-										id="_9mobile" value="9Mobile">
-									<!-- <label class="form-check-label" for="inlineRadio4">4</label> -->
-								</div>
-							</div>
-						</div>
-						<div class="mb-3">
-							<select name="plan" id="plan" class="form-select" required="">
-								<option value=""> Select Plan </option>
-								<option value="500mb-sme-30days-150">500mb {Sme} - 30days #150</option>
-								<option value="1gb-sme-30days-225">1gb {Sme} - 30days #225</option>
-								<option value="2gb-sme-30days-450">2gb {Sme} - 30days #450</option>
-								<option value="3gb-sme-30days-675">3gb {Sme} - 30days #675</option>
-								<option value="5gb-sme-30days-1125">5gb {Sme} - 30days #1,125</option>
-								<option value="10gb-sme-30days-2250">10gb {Sme} - 30days #2,250</option>
-							</select>
-						</div>
-						<!-- <div class="mb-3">
-							<input type="text" class="form-control" id="amount" placeholder="Amount">
-						</div> -->
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-							data-bs-target="#paymentCardModal">Proceed</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!--Airtime To Cash Modal -->
-		<div class="modal fade" id="airtimeCash_Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-			aria-labelledby="airtimeCashModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title" id="airtimeCashModalLabel">Convert Airtime to Cash</h1>
-						<div class="small">
-							Welcome We can help you convert your excess Airtime to Cash,
-							money will be paid directly into your Bank Account or Fund your
-							Wallet based on your choice. Please, confirm conversion rate before you proceed.
-						</div>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<div class="mb-3">
-							<label for="networkProvider" class="form-label">Choose Network Provider</label>
-							<div class="network">
-								<div class="form-check form-check-inline">
-									<input class="mtn form-check-input" type="radio" name="inlineRadioOptions" id="mtn"
-										value="mtn">
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="airtel form-check-input" type="radio" name="inlineRadioOptions"
-										id="airtel" value="airtel">
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="glo form-check-input" type="radio" name="inlineRadioOptions" id="glo"
-										value="glo">
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="_9mobile form-check-input" type="radio" name="inlineRadioOptions"
-										id="_9mobile" value="9Mobile">
-								</div>
-							</div>
-						</div>
-						<div class="mb-3">
-							<input type="text" class="form-control" id="howMuchSending"
-								placeholder="Amount you are sending">
-						</div>
-						<div class="mb-3">
-							<input type="text" class="form-control" id="howMuchReceive"
-								placeholder="Amount you will receive">
-						</div>
-
-						<div class="mb-3">
-							<input type="text" class="form-control" id="sendFrom"
-								placeholder="Phone Number (you are sending from?)">
-						</div>
-						<div class="mb-3">
-							<select name="plan" id="plan" class="form-select" required="">
-								<option value=""> Bank Name </option>
-								<option>Access Bank Plc</option>
-								<option>Guaranty Bank Plc</option>
-								<option>Fidelity Bank Plc</option>
-								<option>First Bank of Nigeria</option>
-								<option>First City Monument Bank</option>
-								<option>Union Bank of Nigeria</option>
-							</select>
-						</div>
-						<div class="mb-3">
-							<input type="text" class="form-control" id="accountNo" placeholder="Account Number">
-						</div>
-						<div class="mb-3">
-							<input type="text" class="form-control" id="accountName" placeholder="Account Name">
-						</div>
-
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary w-100">Submit</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!--Electricity Token Modal -->
-		<div class="modal fade" id="electricToken_Modal" data-bs-backdrop="static" data-bs-keyboard="false"
-			tabindex="-1" aria-labelledby="electricTokenModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title" id="electricTokenModalLabel">Buy Electricity Token</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<div class="mb-3">
-							<select name="plan" id="plan" class="form-select" required="">
-								<option value=""> Electricity Distribution </option>
-								<option>IKEDC</option>
-							</select>
-						</div>
-						<div class="mb-3">
-							<select name="plan" id="plan" class="form-select" required="">
-								<option value=""> Meter Type </option>
-								<option>Prepaid</option>
-								<option>Postpaid</option>
-							</select>
-						</div>
-						<div class="mb-3">
-							<input type="text" class="form-control" id="howMuchSending" placeholder="Meter Number">
-						</div>
-						<div class="mb-3">
-							<input type="text" class="form-control" id="howMuchReceive" placeholder="Amount">
-						</div>
-
-
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-							data-bs-target="#paymentCardModal">Proceed</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!--Cable Television Token Modal -->
-		<div class="modal fade" id="cableTelevision_Modal" data-bs-backdrop="static" data-bs-keyboard="false"
-			tabindex="-1" aria-labelledby="cableTelevisionModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title" id="cableTelevisionModalLabel">
-							Pay DStv, GOtv and StarTimes Subscription
-						</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<div class="mb-3">
-							<select name="plan" id="plan" class="form-select" required="">
-								<option value=""> Cable TV Subscription </option>
-								<option value="DStv">DStv</option>
-								<option value="GOtv">GOtv</option>
-								<option value="StarTimes">StarTimes</option>
-							</select>
-						</div>
-
-						<div class="mb-3">
-							<input type="text" class="form-control" id="howMuchSending"
-								placeholder="SmartCard/Decoder(ICU) Number">
-						</div>
-						<div class="mb-3">
-							<select name="plan" id="plan" class="form-select" required="">
-								<option value="">Select Package</option>
-								<option value="gotv-smallie-monthly-800">Gotv Smallie - Monthly (₦800) </option>
-								<option value="gotv-jinja-1640">Gotv Jinja - #1,640</option>
-								<option value="gotv-max-3600">Gotv Max - #3,600</option>
-								<option value="gotv-smallie-quarterly-2100">Gotv Smallie (Quarterly) - #2,100</option>
-								<option value="gotv-jolli-2460">Gotv Jolli - #2,460</option>
-							</select>
-						</div>
-						<div class="input-group mb-3">
-							<span class="input-group-text" id="currency-addon">₦</span>
-							<input type="text" class="form-control" placeholder="Amount" aria-label="Amount"
-								aria-describedby="currency-addon">
-						</div>
-						<!--  -->
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-							data-bs-target="#paymentCardModal">Proceed</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!--Payment Card Modal -->
-		<div class="modal fade" id="paymentCardModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-			aria-labelledby="paymentCardModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header card-purchase">
-						<div class="d-flex">
-							<div class="network">
-								<div class="form-check form-check-inline">
-									<input class="mtn form-check-input" type="radio" name="inlineRadioOptions"
-										id="mtnTopup" value="mtnTopup" checked>
-								</div>
-							</div>
-							<h1 class="modal-title" id="paymentCardModalLabel">
-								MTN Top-up
-								<span class="d-block" style="font-size: 0.85rem;">07030138773</span>
-							</h1>
-						</div>
-
-
-
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-
-					<div class="modal-body">
-						<div class="total-charge">
-							<div class="charge">₦1,500.00</div>
-							<div class="surcharge d-block">Surcharge: ₦0.00</div>
-						</div>
-						<br>
-						<div class="mb-3">
-							<input type="email" class="form-control" id="cardNumber" placeholder="Card Number">
-						</div>
-						<!-- <div class="mb-3">
-							<select name="plan" id="plan" class="form-select" required="">
-								<option value=""> Account Type </option>
-								<option>Not Sure</option>
-								<option>Savings</option>
-								<option>Current</option>
-							</select>
-						</div> -->
-						<div class="mb-3">
-							<input type="email" class="form-control" id="nameOnCard" placeholder="Name On Card">
-						</div>
-						<div class="mb-3 d-flex justify-content-between align-items-center" style="gap: 1rem;">
-							<input type="text" class="form-control" id="expDate" placeholder="Expiry MM/YY">
-							<input type="text" class="form-control" id="cvv" placeholder="CVV">
-						</div>
-						<div class="mb-3">
-							<input type="text" maxlength="4" class="form-control" id="pin" placeholder="PIN">
-						</div>
-
-						<div class="form-check form-switch">
-							<input class="form-check-input" type="checkbox" role="switch" id="cardtoWallet">
-							<label class="form-check-label" for="cardtoWallet">
-								Add card to wallet
-							</label>
-						</div>
-
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary w-100">Pay Now</button>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 		<script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 		<script src="assets/js/main.js"></script>
 
+		<script src="assets/js/jquery-3.6.4.min.js"></script>
+		<script src="assets/js/countrySelect.js"></script>
 		<script>
+			$("#country_selector").countrySelect({
+				// defaultCountry: "jp",
+				// onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+				// responsiveDropdown: true, 
+				// preferredCountries: ['ca', 'gb', 'us']
+				preferredCountries: ['ng', 'gb', 'us']
+			});
 		</script>
 	</body>
 
