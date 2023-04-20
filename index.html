@@ -10,7 +10,8 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 		<link rel="stylesheet" href="assets/css/nav.css">
 		<link rel="stylesheet" href="assets/css/stylesheet.css">
-		<link rel="stylesheet" href="assets/css/countrySelect.css">
+		<!-- <link rel="stylesheet" href="assets/css/countrySelect.css"> -->
+		<link rel="stylesheet" href="assets/css/flags.css">
 
 	</head>
 
@@ -39,7 +40,7 @@
 								</li>
 								<li class="nav__item">
 									<a href="" class="nav__link">
-										All Billers
+										Billers
 									</a>
 								</li>
 								<li class="nav__item">
@@ -62,11 +63,10 @@
 						<div class="d-flex align-items-center">
 
 							<form>
-								<div class="form-item">
+								<!-- <div class="form-item">
 									<input id="country_selector" type="text">
 									<label for="country_selector" style="display:none;">Select a country here...</label>
 								</div>
-
 								<div class="form-item" style="display:none;">
 									<input type="text" id="country_selector_code" name="country_selector_code"
 										data-countrycodeinput="1" readonly="readonly"
@@ -77,8 +77,11 @@
 										here
 									</label>
 								</div>
+								<button type="submit" style="display:none;">Submit</button> -->
 
-								<button type="submit" style="display:none;">Submit</button>
+								<div class="form-group">
+									<div id="basic" data-input-name="country"></div>
+								</div>
 							</form>
 
 
@@ -125,18 +128,7 @@
 
 		<div id="sideBarNav" class="sideBarNav d-none">
 			<ul class="nav-menu">
-				<!-- <li class="nav-item">
-					<i class="bi bi-speedometer2"></i>
-					<a href="./dashboard.html" class="nav-link">Dashboard</a>
-				</li>
-				<li class="nav-item">
-					<i class="bi bi-person"></i>
-					<a href="#" class="nav-link">My Profile</a>
-				</li>
-				<li class="nav-item">
-					<i class="bi bi-clock-history"></i>
-					<a href="#" class="nav-link">Transaction History</a>
-				</li> -->
+
 				<li class="nav-item">
 					<i class="bi bi-speedometer2"></i>
 					<a href="#.html" class="nav-link">Bill Payments / Utilities</a>
@@ -424,21 +416,24 @@
 
 
 
-
+		<script src="assets/js/jquery-3.6.4.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 		<script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
-		<script src="assets/js/main.js"></script>
+		<!-- <script src="assets/js/main.js"></script>
 
-		<script src="assets/js/jquery-3.6.4.min.js"></script>
-		<script src="assets/js/countrySelect.js"></script>
+
+		<script src="assets/js/countrySelect.js"></script> -->
+		<script src="assets/js/jquery.flagstrap.js"></script>
+
 		<script>
-			$("#country_selector").countrySelect({
+			$('#basic').flagStrap();
+			/* $("#country_selector").countrySelect({
 				// defaultCountry: "jp",
 				// onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
 				// responsiveDropdown: true, 
 				// preferredCountries: ['ca', 'gb', 'us']
 				preferredCountries: ['ng', 'gb', 'us']
-			});
+			}); */
 		</script>
 	</body>
 
