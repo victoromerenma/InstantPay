@@ -144,18 +144,39 @@ a:hover {
 	gap: 15px;
 }
 
+.min_Dashboard__Height {
+	min-height: 450px;
+
+}
+
 .overview__Container {
 	display: flex;
 	width: 100%;
-	min-height: 373px;
 }
 
 .empty__Content {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	width: 100%;
 	font-size: 0.85rem;
+}
+
+.loaded__Content {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-direction: column;
+	width: 100%;
+	font-size: 0.85rem;
+}
+
+.section_Title {
+	font-size: 1.125rem;
+	font-weight: 600;
+	display: flex;
+	justify-content: start;
 }
 
 .figures {
@@ -725,22 +746,18 @@ img {
 }
 
 .btn {
-	padding: 00.375rem 0.75rem;
+	padding: 00.375rem 1.25rem;
 	font-size: 1rem;
 	border-radius: 35px;
 	text-decoration: none;
-
 	box-sizing: border-box;
 	min-width: 150px;
 	height: 50px;
-	/*  */
 	border-radius: 35px;
-
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 500;
 	line-height: 20px;
-
 	display: grid;
 	align-items: center;
 	text-align: center;
@@ -1314,6 +1331,7 @@ h5.card-title {
 
 .main .recent-orders {
 	margin-top: 2rem;
+	width: 100%;
 }
 
 .main .recent-orders h2 {
