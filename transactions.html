@@ -26,19 +26,19 @@
 								</a>
 							</li>
 							<li class="nav-item active">
-								<a href="#all__Transactions" class="nav-link dropdown-toggle" data-bs-toggle="collapse"
+								<a href="#all__Transactions" class="nav-link" data-bs-toggle="collapse"
 									aria-expanded="false">
 									<i class="bi bi-briefcase"></i>
 									<span>Transactions</span>
 								</a>
 								<ul class="collapse list-unstyled sub_nav-menu" id="all__Transactions">
-									<li class="active">
+									<li class="nav-item active">
 										<a href="./transactions.html">Transactions</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Refunds</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Chargebacks</a>
 									</li>
 								</ul>
@@ -56,13 +56,13 @@
 									<span>Balances</span>
 								</a>
 								<ul class="collapse list-unstyled sub_nav-menu" id="all__Balances">
-									<li>
+									<li class="nav-item">
 										<a href="./balances.html">Balances</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Balance History</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Settlements</a>
 									</li>
 								</ul>
@@ -73,22 +73,22 @@
 									<span>Store</span>
 								</a>
 								<ul class="collapse list-unstyled sub_nav-menu" id="the_Store">
-									<li>
+									<li class="nav-item">
 										<a href="./orders.html">Orders</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="./products.html">Products</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Discount codes</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Product Categories</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Manage Store</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Shipping</a>
 									</li>
 								</ul>
@@ -100,16 +100,16 @@
 									<span>Payments</span>
 								</a>
 								<ul class="collapse list-unstyled sub_nav-menu" id="everything_Payments">
-									<li>
+									<li class="nav-item">
 										<a href="#">Transfers</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Invoices</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Payment Link</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Cards</a>
 									</li>
 								</ul>
@@ -120,13 +120,13 @@
 									<span>Settings</span>
 								</a>
 								<ul class="collapse list-unstyled sub_nav-menu" id="my_Settings">
-									<li>
+									<li class="nav-item">
 										<a href="#">Business Preference</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Settlement Accounts</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">API Keys</a>
 									</li>
 								</ul>
@@ -158,11 +158,49 @@
 							<div class="page__Body">
 								<div class="row transaction__Container min_Dashboard__Height">
 									<div class="d-flex col-sm-12 col-md-12 col-lg-12">
-										<div id="no_Transaction" class="empty__Content">
+										<div id="no_Transaction" class="empty__Content d-none">
 											<h2>
 												You have no transactions in the last 30 days, <br>
 												but you can change that.
 											</h2>
+										</div>
+										<div id="loaded_Store" class="loaded__Content">
+
+											<div class="section_Title w-100 mb-3">
+												Recent Transactions
+											</div>
+											<div class="table-responsive w-100">
+												<table class="table">
+													<thead class="table-secondary">
+														<tr>
+															<th>#</th>
+															<th>Product Name</th>
+															<th>Price</th>
+															<th>Number of Product Sold</th>
+															<th>Date</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1</td>
+															<td>Loaf Cake</td>
+															<td>NGN 1,500.00</td>
+															<td>0 / 10</td>
+															<td>a minute ago</td>
+														</tr>
+														<tr>
+															<td>2</td>
+															<td>Loaf Cake</td>
+															<td>NGN 1,500.00</td>
+															<td>0 / 10</td>
+															<td>a minute ago</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+											<div class="divider mb-5"></div>
+
 										</div>
 									</div>
 								</div>

@@ -20,36 +20,122 @@
 					<div class="sideBarNav">
 						<ul class="nav-menu">
 							<li class="nav-item">
-								<i class="bi bi-speedometer2"></i>
-								<a href="./dashboard.html" class="nav-link">Dashboard</a>
+								<a href="./dashboard.html" class="nav-link">
+									<i class="bi bi-speedometer2"></i>
+									<span>Dashboard</span>
+								</a>
 							</li>
 							<li class="nav-item">
-								<i class="bi bi-briefcase"></i>
-								<a href="./transactions.html" class="nav-link">Transactions</a>
+								<a href="#all__Transactions" class="nav-link" data-bs-toggle="collapse"
+									aria-expanded="false">
+									<i class="bi bi-briefcase"></i>
+									<span>Transactions</span>
+								</a>
+								<ul class="collapse list-unstyled sub_nav-menu" id="all__Transactions">
+									<li class="nav-item">
+										<a href="./transactions.html">Transactions</a>
+									</li>
+									<li class="nav-item">
+										<a href="#">Refunds</a>
+									</li>
+									<li class="nav-item">
+										<a href="#">Chargebacks</a>
+									</li>
+								</ul>
 							</li>
 							<li class="nav-item">
-								<i class="bi bi-people"></i>
-								<a href="./customers.html" class="nav-link">Customers</a>
+								<a href="./customers.html" class="nav-link">
+									<i class="bi bi-people"></i>
+									<span>Customers</span>
+								</a>
 							</li>
 							<li class="nav-item active">
-								<i class="bi bi-wallet2"></i>
-								<a href="./balances.html" class="nav-link">Balances</a>
+								<a href="#all__Balances" class="nav-link" data-bs-toggle="collapse"
+									aria-expanded="false">
+									<i class="bi bi-wallet2"></i>
+									<span>Balances</span>
+								</a>
+								<ul class="collapse list-unstyled sub_nav-menu" id="all__Balances">
+									<li class="nav-item">
+										<a href="./balances.html">Balances</a>
+									</li>
+									<li class="nav-item">
+										<a href="#">Balance History</a>
+									</li>
+									<li class="nav-item">
+										<a href="#">Settlements</a>
+									</li>
+								</ul>
 							</li>
 							<li class="nav-item">
-								<i class="bi bi-shop"></i>
-								<a href="#" class="nav-link">Store</a>
+								<a href="#the_Store" class="nav-link" data-bs-toggle="collapse" aria-expanded="false">
+									<i class="bi bi-shop"></i>
+									<span>Store</span>
+								</a>
+								<ul class="collapse list-unstyled sub_nav-menu" id="the_Store">
+									<li>
+										<a href="./orders.html">Orders</a>
+									</li>
+									<li>
+										<a href="./products.html">Products</a>
+									</li>
+									<li>
+										<a href="#">Discount codes</a>
+									</li>
+									<li>
+										<a href="#">Product Categories</a>
+									</li>
+									<li>
+										<a href="#">Manage Store</a>
+									</li>
+									<li>
+										<a href="#">Shipping</a>
+									</li>
+								</ul>
 							</li>
 							<li class="nav-item">
-								<i class="bi bi-credit-card"></i>
-								<a href="#" class="nav-link">Payments</a>
+								<a href="#everything_Payments" class="nav-link" data-bs-toggle="collapse"
+									aria-expanded="false">
+									<i class="bi bi-credit-card"></i>
+									<span>Payments</span>
+								</a>
+								<ul class="collapse list-unstyled sub_nav-menu" id="everything_Payments">
+									<li>
+										<a href="#">Transfers</a>
+									</li>
+									<li>
+										<a href="#">Invoices</a>
+									</li>
+									<li>
+										<a href="#">Payment Link</a>
+									</li>
+									<li>
+										<a href="#">Cards</a>
+									</li>
+								</ul>
 							</li>
 							<li class="nav-item">
-								<i class="bi bi-gear"></i>
-								<a href="#" class="nav-link">Settings</a>
+								<a href="#my_Settings" class="nav-link" data-bs-toggle="collapse" aria-expanded="false">
+									<i class="bi bi-gear"></i>
+									<span>Settings</span>
+								</a>
+								<ul class="collapse list-unstyled sub_nav-menu" id="my_Settings">
+									<li>
+										<a href="#">Business Preference</a>
+									</li>
+									<li>
+										<a href="#">Settlement Accounts</a>
+									</li>
+									<li>
+										<a href="#">API Keys</a>
+									</li>
+								</ul>
 							</li>
 							<li class="nav-item">
-								<i class="bi bi-box-arrow-in-right"></i>
-								<a href="#" class="nav-link">Omolola Kolade</a>
+								<a href="#" class="nav-link">
+									<i class="bi bi-box-arrow-in-right"></i>
+									<span>Omolola Kolade</span>
+								</a>
 							</li>
 						</ul>
 					</div>
@@ -88,6 +174,19 @@
 				</div>
 			</div>
 		</div>
+
+
+
+		<script src="assets/js/jquery-3.6.4.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#sidebarCollapse').on('click', function () {
+					$('#sidebar').toggleClass('active');
+				});
+			});
+		</script>
+
 	</body>
 
 </html>
