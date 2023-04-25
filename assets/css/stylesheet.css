@@ -1235,7 +1235,13 @@ h5.card-title {
 	border: solid 1px #f6f6f6;
 }
 
-.main .insights>div span {
+.main .insights>div span,
+.main .insights>div .icon-reference {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background: var(--tt-indigo);
 	padding: 0.5rem;
 	border-radius: 50%;
@@ -1243,11 +1249,13 @@ h5.card-title {
 	font-size: 1.25rem;
 }
 
-.main .insights>div.expenses span {
+.main .insights>div.expenses span,
+.main .insights>div.expenses .icon-reference {
 	background: var(--tt-danger);
 }
 
-.main .insights>div.income span {
+.main .insights>div.income span,
+.main .insights>div.income .icon-reference {
 	background: var(--tt-success);
 }
 
