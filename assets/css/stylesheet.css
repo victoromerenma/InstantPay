@@ -1700,3 +1700,28 @@ h5.card-title {
 		font-size: 2rem;
 	}
 }
+
+
+/* ===========================
+Profile Style================= */
+
+.profile-info_header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.profile-info_header h5 {
+	font-size: 1.25rem;
+}
+
+.profile-info {
+	display: grid;
+}
+
+.profile-info_body {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	gap: 15px;
+}
