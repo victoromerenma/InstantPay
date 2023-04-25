@@ -346,6 +346,11 @@ a.nav-link[aria-expanded="true"] {
 	transform: translate3d(15px, 40px, 0px) !important;
 }
 
+/* .dropdown:hover .dropdown-menu {
+	display: block;
+	transform: translate3d(15px, 0px, 0px) !important;
+} */
+
 .dropdown-toggle::after {
 	display: inline-block;
 	margin-left: .255em;
