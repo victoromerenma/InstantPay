@@ -331,7 +331,14 @@ a.nav-link[aria-expanded="true"] {
 
 .dropdown-menu {
 	border: none;
+}
 
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:hover {
+	text-decoration: none;
+	background-color: #a70d02;
+	color: #fff;
 }
 
 .dropdown-menu.show {
