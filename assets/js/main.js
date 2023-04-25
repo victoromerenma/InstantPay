@@ -1,26 +1,3 @@
-/*
-	const hamburger = document.querySelector(".hamburger");
-	const navMenu = document.querySelector(".nav-menu");
-
-	hamburger.addEventListener("click", mobileMenu);
-
-	function mobileMenu() {
-		hamburger.classList.toggle("active");
-		navMenu.classList.toggle("active");
-	}
-
-	// burgerMenu.click(function() {
-	//   this.classList.toggle('open')
-	// })
-
-	// const burgerMenu = document.querySelector('.menu')
-
-	// burgerMenu.addEventListener('click', event => {
-	//   burgerMenu.classList.toggle('open')
-	// }).sideBarNav
-
-*/
-
 const burgerMenu = document.querySelector('.menu')
 const sideNav = document.querySelector('.sideBarNav')
 
@@ -30,15 +7,26 @@ function sidemenu() {
   sideNav.classList.toggle('active')
 }
 
-// window.addEventListener('mouseup', function(event) {
-//   var box = document.getElementById('sideBarNav')
-//   if (event.target != box && event.target.parentNode != box) {
-//     box.style.display = 'none'
-//   }
-// })
+//
+//
+// Login Modal
+//
+//
 
-/* const today = new Date()
-const year = today.getFullYear()
+const loginForm = document.getElementById('loginForm')
+const loginButton = document.getElementById('loginForm__Submit')
+const loginErrorMsg = document.getElementById('login-error-msg')
 
-document.getElementById('copyright').innerHTML = year()
- */
+loginButton.addEventListener('click', e => {
+  e.preventDefault()
+  const username = loginForm.email_mobileNumber.value
+  const password = loginForm.login_Password.value
+
+  if (username === 'Omolola.Kolade@gmail.com' && password === 'OK_password') {
+    //alert('You have successfully logged in.')
+    window.location.href = './dashboard.html'
+  } else {
+    alert('Sorry!!!.')
+    // loginErrorMsg.style.opacity = 1
+  }
+})
