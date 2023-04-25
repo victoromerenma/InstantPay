@@ -32,7 +32,12 @@
 										Bill Payments / Utilities
 									</a>
 									<ul class="dropdown-menu rounded-0" aria-labelledby="navbarDarkDropdownMenuLink">
-										<li><a class="dropdown-item" href="#">Mobile & E-Topup</a></li>
+										<li>
+											<a class="dropdown-item" href="" data-bs-toggle="modal"
+												data-bs-target="#airtimeRecharge_Modal">
+												Mobile & E-Topup
+											</a>
+										</li>
 										<li><a class="dropdown-item" href="#">Electricity / Utility</a></li>
 										<li><a class="dropdown-item" href="#">Cable TV</a></li>
 										<li>
@@ -44,11 +49,6 @@
 
 									</ul>
 								</li>
-
-
-
-
-
 
 								<li class="nav__item">
 									<a href="" class="nav__link">
@@ -73,10 +73,6 @@
 							</ul>
 						</div>
 						<div class="d-flex align-items-center">
-
-
-
-
 
 							<ul id="primary-navigation" class="primary-navigation flex">
 								<li class="nav__item">
@@ -122,7 +118,7 @@
 
 				<li class="nav-item">
 					<i class="bi bi-speedometer2"></i>
-					<a href="#.html" class="nav-link">Bill Payments / Utilities</a>
+					<a href="" class="nav-link" airtimeRecharge_Modal>Bill Payments / Utilities</a>
 				</li>
 				<li class="nav-item">
 					<i class="bi bi-person"></i>
@@ -400,6 +396,118 @@
 						Already have an account?
 						<a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
 
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Airtime Recharge Modal -->
+		<div class="modal fade" id="airtimeRecharge_Modal" data-bs-backdrop="static" data-bs-keyboard="false"
+			tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="signUpModalLabel">Recharge your mobile</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="mb-3">
+							<input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
+						</div>
+						<div class="mb-3">
+							<div class="network">
+								<div class="form-check form-check-inline">
+									<input class="mtn form-check-input" type="radio" name="inlineRadioOptions" id="mtn"
+										value="mtn">
+									<!-- <label class="form-check-label" for="inlineRadio1">1</label> -->
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="airtel form-check-input" type="radio" name="inlineRadioOptions"
+										id="airtel" value="airtel">
+									<!-- <label class="form-check-label" for="inlineRadio2">2</label> -->
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="glo form-check-input" type="radio" name="inlineRadioOptions" id="glo"
+										value="glo">
+									<!-- <label class="form-check-label" for="inlineRadio3">3</label> -->
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="_9mobile form-check-input" type="radio" name="inlineRadioOptions"
+										id="_9mobile" value="9Mobile">
+									<!-- <label class="form-check-label" for="inlineRadio4">4</label> -->
+								</div>
+							</div>
+						</div>
+						<div class="mb-3">
+							<input type="amount" class="form-control" id="amount" placeholder="Amount">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+							data-bs-target="#loginModal">Proceed</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Data Recharge Modal -->
+		<div class="modal fade" id="dataRecharge_Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+			aria-labelledby="dataRechargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="dataRechargeModalLabel">Buy Mobile Data</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+
+						<div class="mb-3">
+							<input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
+						</div>
+
+						<div class="mb-3">
+							<label for="networkProvider" class="form-label">Choose Network Provider</label>
+							<div class="network">
+								<div class="form-check form-check-inline">
+									<input class="mtn form-check-input" type="radio" name="inlineRadioOptions" id="mtn"
+										value="mtn">
+									<!-- <label class="form-check-label" for="inlineRadio1">1</label> -->
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="airtel form-check-input" type="radio" name="inlineRadioOptions"
+										id="airtel" value="airtel">
+									<!-- <label class="form-check-label" for="inlineRadio2">2</label> -->
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="glo form-check-input" type="radio" name="inlineRadioOptions" id="glo"
+										value="glo">
+									<!-- <label class="form-check-label" for="inlineRadio3">3</label> -->
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="_9mobile form-check-input" type="radio" name="inlineRadioOptions"
+										id="_9mobile" value="9Mobile">
+									<!-- <label class="form-check-label" for="inlineRadio4">4</label> -->
+								</div>
+							</div>
+						</div>
+						<div class="mb-3">
+							<select name="plan" id="plan" class="form-select" required="">
+								<option value=""> Select Plan </option>
+								<option value="500mb-sme-30days-150">500mb {Sme} - 30days #150</option>
+								<option value="1gb-sme-30days-225">1gb {Sme} - 30days #225</option>
+								<option value="2gb-sme-30days-450">2gb {Sme} - 30days #450</option>
+								<option value="3gb-sme-30days-675">3gb {Sme} - 30days #675</option>
+								<option value="5gb-sme-30days-1125">5gb {Sme} - 30days #1,125</option>
+								<option value="10gb-sme-30days-2250">10gb {Sme} - 30days #2,250</option>
+							</select>
+						</div>
+						<!-- <div class="mb-3">
+									<input type="text" class="form-control" id="amount" placeholder="Amount">
+								</div> -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+							data-bs-target="#paymentCardModal">Proceed</button>
 					</div>
 				</div>
 			</div>
