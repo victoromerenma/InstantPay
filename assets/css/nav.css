@@ -328,3 +328,24 @@ a.nav-link[aria-expanded="true"] {
 .dropup ul.dropdown-menu .nav-item:last-child {
 	margin-top: auto;
 }
+
+.dropdown-menu {
+	border: none;
+
+}
+
+.dropdown-menu.show {
+	display: block;
+	transform: translate3d(15px, 40px, 0px) !important;
+}
+
+.dropdown-toggle::after {
+	display: inline-block;
+	margin-left: .255em;
+	vertical-align: .255em;
+	content: "";
+	border-top: .3em solid;
+	border-right: .3em solid a70d02 !important;
+	border-bottom: 0;
+	border-left: .3em solid a70d02 !important;
+}
