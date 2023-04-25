@@ -18,11 +18,7 @@
 				<div class="wrapper">
 
 					<div class="sideBarNav">
-						<!-- <button type="button" id="sidebarCollapse" class="btn btn-info">
-												<i class="fas fa-align-left"></i>
-												<span>Toggle Sidebar</span>
-											</button> -->
-						<ul class="nav-menu">
+						<ul class="nav-menu" id="side__Menu">
 							<li class="nav-item">
 								<a href="./dashboard.html" class="nav-link">
 									<i class="bi bi-speedometer2"></i>
@@ -30,20 +26,20 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#all__Transactions" class="nav-link dropdown-toggle" data-bs-toggle="collapse"
-									aria-expanded="false">
-
+								<a href="#all__Transactions" class="nav-link" data-bs-toggle="collapse"
+									aria-expanded="false" aria-controls="all__Transactions">
 									<i class="bi bi-briefcase"></i>
 									<span>Transactions</span>
 								</a>
-								<ul class="collapse list-unstyled sub_nav-menu" id="all__Transactions">
-									<li>
+								<ul id="all__Transactions" class="collapse list-unstyled sub_nav-menu"
+									data-bs-parent="#side__Menu">
+									<li class="nav-item">
 										<a href="./transactions.html">Transactions</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Refunds</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Chargebacks</a>
 									</li>
 								</ul>
@@ -56,75 +52,81 @@
 							</li>
 							<li class="nav-item">
 								<a href="#all__Balances" class="nav-link" data-bs-toggle="collapse"
-									aria-expanded="false">
+									aria-expanded="false" aria-controls="all__Balances">
 									<i class="bi bi-wallet2"></i>
 									<span>Balances</span>
 								</a>
-								<ul class="collapse list-unstyled sub_nav-menu" id="all__Balances">
-									<li>
+								<ul id="all__Balances" class="collapse list-unstyled sub_nav-menu"
+									data-bs-parent="#side__Menu">
+									<li class="nav-item">
 										<a href="./balances.html">Balances</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Balance History</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Settlements</a>
 									</li>
 								</ul>
 							</li>
 							<li class="nav-item active">
-								<a href="#the_Store" class="nav-link" data-bs-toggle="collapse" aria-expanded="false">
+								<a href="#the_Store" class="nav-link" data-bs-toggle="collapse" aria-expanded="false"
+									aria-controls="the_Store">
 									<i class="bi bi-shop"></i>
 									<span>Store</span>
 								</a>
-								<ul class="collapse list-unstyled sub_nav-menu" id="the_Store">
-									<li>
-										<a href="#">Orders</a>
+								<ul id="the_Store" class="collapse list-unstyled sub_nav-menu"
+									data-bs-parent="#side__Menu">
+									<li class="nav-item">
+										<a href="./orders.html">Orders</a>
 									</li>
-									<li>
-										<a href="#">Products</a>
+									<li class="nav-item">
+										<a href="./products.html">Products</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Discount codes</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Product Categories</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Manage Store</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Shipping</a>
 									</li>
 								</ul>
 							</li>
 							<li class="nav-item">
-								<a href="#everything_Payments" class="nav-link" data-bs-toggle="collapse"
-									aria-expanded="false">
+								<a href="#all_Payments" class="nav-link" data-bs-toggle="collapse" aria-expanded="false"
+									aria-controls="all_Payments">
 									<i class="bi bi-credit-card"></i>
 									<span>Payments</span>
 								</a>
-								<ul class="collapse list-unstyled sub_nav-menu" id="everything_Payments">
-									<li>
+								<ul id="all_Payments" class="collapse list-unstyled sub_nav-menu"
+									data-bs-parent="#side__Menu">
+									<li class="nav-item">
 										<a href="#">Transfers</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Invoices</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Payment Link</a>
 									</li>
-									<li>
+									<li class="nav-item">
 										<a href="#">Cards</a>
 									</li>
 								</ul>
 							</li>
 							<li class="nav-item">
-								<a href="#my_Settings" class="nav-link" data-bs-toggle="collapse" aria-expanded="false">
+								<a href="#my_Settings" class="nav-link" data-bs-toggle="collapse" aria-expanded="false"
+									aria-controls="my_Settings">
 									<i class="bi bi-gear"></i>
 									<span>Settings</span>
 								</a>
-								<ul class="collapse list-unstyled sub_nav-menu" id="my_Settings">
+								<ul id="my_Settings" class="collapse list-unstyled sub_nav-menu"
+									data-bs-parent="#side__Menu">
 									<li>
 										<a href="#">Business Preference</a>
 									</li>
@@ -136,12 +138,25 @@
 									</li>
 								</ul>
 							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link">
+							<li class="nav-item dropup">
+								<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+									aria-expanded="false">
 									<i class="bi bi-box-arrow-in-right"></i>
 									<span>Omolola Kolade</span>
 								</a>
+								<ul class="dropdown-menu rounded-0" style="width: 94%">
+									<li class="nav-item">
+										<a href="#">Profile </a>
+									</li>
+									<li class="nav-item">
+										<a href="#">Merchant ID: 001</a>
+									</li>
+								</ul>
 							</li>
+
+
+
+
 						</ul>
 					</div>
 
