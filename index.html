@@ -60,26 +60,44 @@
 										<li><a class="dropdown-item" href="#">Documentation</a></li>
 										<li><a class="dropdown-item" href="#">Integrations</a></li>
 										<li><a class="dropdown-item" href="#">Status Page</a></li>
-
 									</ul>
-
-
-
 								</li>
-								<li class="nav__item">
-									<a href="" class="nav__link">
+								<li class="nav__item dropdown">
+									<a href="" class="nav__link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+										aria-expanded="false">
 										Merchants
 									</a>
+									<ul class="dropdown-menu rounded-0">
+										<li><a class="dropdown-item" href="#">Product Categories</a></li>
+										<li><a class="dropdown-item" href="#">Product</a></li>
+										<li><a class="dropdown-item" href="#">Store</a></li>
+										<li><a class="dropdown-item" href="#">Payment</a></li>
+										<li><a class="dropdown-item" href="#">Merchant Referrals</a></li>
+										<li><a class="dropdown-item" href="#">Reward System</a></li>
+										<li><a class="dropdown-item" href="#">Refund System</a></li>
+										<li><a class="dropdown-item" href="#">Cards</a></li>
+										<li><a class="dropdown-item" href="#">Integration</a></li>
+									</ul>
 								</li>
-								<li class="nav__item">
-									<a href="" class="nav__link">
+								<li class="nav__item dropdown">
+									<a href="" class="nav__link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+										aria-expanded="false">
 										Resources
 									</a>
+									<ul class="dropdown-menu rounded-0">
+										<li><a class="dropdown-item" href="#">Documentation</a></li>
+									</ul>
 								</li>
-								<li class="nav__item">
-									<a href="" class="nav__link">
+								<li class="nav__item dropdown">
+									<a href="" class="nav__link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+										aria-expanded="false">
 										Support
 									</a>
+									<ul class="dropdown-menu rounded-0">
+										<li><a class="dropdown-item" href="#">Quick Help</a></li>
+										<li><a class="dropdown-item" href="#">Contact Us</a></li>
+										<li><a class="dropdown-item" href="#">Dispute Management</a></li>
+									</ul>
 								</li>
 							</ul>
 						</div>
@@ -92,6 +110,10 @@
 									</a>
 								</li>
 							</ul>
+
+							<div>
+								<select class="selectpicker countrypicker" data-flag="true"></select>
+							</div>
 
 							<div class="menu nav-burger d-sm-block d-md-none d-lg-none" data-menu="15">
 								<div class="icon"></div>
@@ -526,8 +548,9 @@
 
 
 
-
+		<script src="./assets/js/jquery-3.6.4.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="./assets/js/bootstrap-select.js"></script>
 		<script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 		<script src="assets/js/main.js"></script>
 
