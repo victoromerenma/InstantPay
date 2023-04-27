@@ -22,7 +22,7 @@ loginButton.addEventListener('click', e => {
   const username = loginForm.email_mobileNumber.value
   const password = loginForm.login_Password.value
 
-  if (username === 'Omolola.Kolade@gmail.com' && password === 'Omo_na_P@ss') {
+  if (username === 'omolola.kolade@gmail.com' && password === 'Pass@123') {
     //alert('You have successfully logged in.')
     window.location.href = './dashboard.html'
   } else {
