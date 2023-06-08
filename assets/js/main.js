@@ -33,9 +33,14 @@ loginButton.addEventListener('click', e => {
   const username = loginForm.email_mobileNumber.value
   const password = loginForm.login_Password.value
 
-  if (username === 'omolola.kolade@gmail.com' && password === 'Pass@123') {
-    //alert('You have successfully logged in.')
+  if (username === 'omolola.kolade@gmail.com' && password === 'pass@123') {
     window.location.href = './dashboard.html'
+  } else if (
+    username === 'chevronfootballclub@gmail.com' &&
+    password === 'chevronpass'
+  ) {
+    //alert('You have successfully logged in.')
+    window.location.href = './dashboard2.html'
   } else {
     alert('Sorry!!!.')
     // loginErrorMsg.style.opacity = 1
