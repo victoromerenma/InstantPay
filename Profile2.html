@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Profile | Instant Bill Pay</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="assets/css/nav.css">
+		<link rel="stylesheet" href="assets/css/stylesheet.css">
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="wrapper">
+
+					<div class="sideBarNav">
+						<ul class="nav-menu" id="side__Menu">
+							<li class="nav-item active">
+								<a href="./dashboard2.html" class="nav-link">
+									<i class="bi bi-speedometer2"></i>
+									<span>Dashboard</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#all__Transactions" class="nav-link" data-bs-toggle="collapse"
+									aria-expanded="false" aria-controls="all__Transactions">
+									<i class="bi bi-briefcase"></i>
+									<span>Membership Management</span>
+								</a>
+								<ul id="all__Transactions" class="collapse list-unstyled sub_nav-menu"
+									data-bs-parent="#side__Menu">
+									<li class="nav-item">
+										<a href="./#.html">Add Member</a>
+									</li>
+									<li class="nav-item">
+										<a href="#">View/Edit Member</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a href="#all__Balances" class="nav-link" data-bs-toggle="collapse"
+									aria-expanded="false" aria-controls="all__Balances">
+									<i class="bi bi-wallet2"></i>
+									<span>Balances</span>
+								</a>
+								<ul id="all__Balances" class="collapse list-unstyled sub_nav-menu"
+									data-bs-parent="#side__Menu">
+									<li class="nav-item">
+										<a href="#.html">View Balances</a>
+									</li>
+									<li class="nav-item">
+										<a href="#">Balance History</a>
+									</li>
+									<li class="nav-item">
+										<a href="#">Settlements</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a href="#all_Payments" class="nav-link" data-bs-toggle="collapse" aria-expanded="false"
+									aria-controls="all_Payments">
+									<i class="bi bi-credit-card"></i>
+									<span>Payments</span>
+								</a>
+								<ul id="all_Payments" class="collapse list-unstyled sub_nav-menu"
+									data-bs-parent="#side__Menu">
+									<li class="nav-item">
+										<a href="#">Transfers</a>
+									</li>
+									<li class="nav-item">
+										<a href="#">Invoices</a>
+									</li>
+									<li class="nav-item">
+										<a href="#">Payment Link</a>
+									</li>
+									<li class="nav-item">
+										<a href="#">Cards</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="bi bi-bell"></i>
+									<span>Communications</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="#my_Settings" class="nav-link" data-bs-toggle="collapse" aria-expanded="false"
+									aria-controls="my_Settings">
+									<i class="bi bi-gear"></i>
+									<span>Settings</span>
+								</a>
+								<ul id="my_Settings" class="collapse list-unstyled sub_nav-menu"
+									data-bs-parent="#side__Menu">
+									<li>
+										<a href="#">Business Preference</a>
+									</li>
+									<li>
+										<a href="#">Settlement Accounts</a>
+									</li>
+									<li>
+										<a href="#">API Keys</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropup">
+								<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+									aria-expanded="false">
+									<i class="bi bi-box-arrow-in-right"></i>
+									<span>Chevron Football Club</span>
+								</a>
+								<ul class="dropdown-menu rounded-0" style="width: 94%">
+									<li class="nav-item">
+										<a href="./Profile2.html">Profile </a>
+									</li>
+									<li class="nav-item">
+										<a href="#">Membership ID: 001</a>
+									</li>
+									<li class="nav-item">
+										<a href="#">Referrals</a>
+									</li>
+									<li class="nav-item mt-3">
+										<a href="#" onClick="window.location.href='./index.html';">Sign Out</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+					<div class="dashboard__section">
+						<div class="dashboard_Header__Section">
+							<div class="topbar">
+								<div class="page__Title">
+									<h1>Profile</h1>
+								</div>
+								<!-- <div class="report__Date">
+									<select name="" id="" class="form-select">
+										<option value="">All Products</option>
+									</select>
+									<input placeholder="Search Product" class="form-control" />
+									<button class="btn btn-primary">Add Product</button>
+								</div> -->
+							</div>
+						</div>
+						<div class="transaction_Body__Section">
+							<div class="page__Body">
+								<div class="row transaction__Container min_Dashboard__Height">
+									<div class="d-flex col-sm-12 col-md-12 col-lg-12">
+
+										<div id="my__Profile" class="loaded__Content">
+
+											<div class="section_Title w-100 mb-3">
+												My Profile
+											</div>
+
+
+											<div class="container">
+												<div class="row">
+													<div class="col-12 col-sm-12 col-md-12">
+														<div class="card mb-3 border-0 rounded-0"
+															style="max-width: 600px;">
+															<div class="row g-0">
+																<div class="col-md-4">
+																	<img src="./assets/images/chev.svg"
+																		class="img-fluid rounded-5" alt="...">
+																</div>
+																<div class="col-md-8">
+																	<div class="card-body">
+																		<h5 class="card-title">
+																			Chevron Football Club
+																		</h5>
+																		<p>
+																			This is a card with supporting text below as
+																			a natural lead-in to additional content.
+																			This content is a little bit longer.
+																		</p>
+																		<p>
+
+																		</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="mt-5">
+														<div class="card-body">
+															<div class="profile-info">
+																<div class="profile-info_header">
+																	<h5>Personal Details</h5>
+																</div>
+																<div class="profile-info_body display-view">
+																	<div class="col">
+																		<label for="inputEmail4" class="form-label">
+																			Full Name
+																		</label>
+																		<input type="text" class="form-control"
+																			id="fullName" value="Chevron Football"
+																			placeholder="Chevron Football">
+																	</div>
+																	<div class="col">
+																		<label for="inputEmail4"
+																			class="form-label">Username</label>
+																		<input type="text" class="form-control"
+																			id="gender" value="ChevronFootballClub"
+																			placeholder="ChevronFootballClub">
+																	</div>
+																	<div class="col">
+																		<label for="inputEmail4"
+																			class="form-label">Gender</label>
+																		<input type="text" class="form-control"
+																			id="gender" value="Male" placeholder="Male">
+																	</div>
+																	<div class="col">
+																		<label for="inputEmail4" class="form-label">
+																			Date of Birth
+																		</label>
+																		<input type="text" class="form-control" id="dob"
+																			value="01/05/2023" placeholder="Male">
+																	</div>
+
+																</div>
+															</div>
+
+															<div class="profile-info pt-4">
+																<div class="profile-info_header">
+																	<h5>Contact Details</h5>
+																</div>
+																<div class="profile-info_body display-view">
+
+																	<div class="col">
+																		<label for="inputEmail4"
+																			class="form-label">Email</label>
+																		<input type="text" class="form-control"
+																			id="email"
+																			value="chevronfootballclub@gmail.com"
+																			placeholder="chevronfootballclub@gmail.com">
+																	</div>
+																	<div class="col">
+																		<label for="inputEmail4"
+																			class="form-label">Phone</label>
+																		<input type="text" class="form-control"
+																			id="phone" value="01 227 2501"
+																			placeholder="01 227 2501">
+																	</div>
+																	<div class="col">
+																		<label for="inputEmail4"
+																			class="form-label">Address</label>
+																		<input type="text" class="form-control"
+																			id="address" value="01, Barack road, GRA"
+																			placeholder="01, Barack road, GRA">
+																	</div>
+																	<div class="col">
+																		<label for="inputEmail4"
+																			class="form-label">State</label>
+																		<input type="text" class="form-control"
+																			id="state" value="Lagos"
+																			placeholder="Lagos">
+																	</div>
+
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="divider mb-5"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+
+		<script src="assets/js/jquery-3.6.4.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#sidebarCollapse').on('click', function () {
+					$('#sidebar').toggleClass('active');
+				});
+			});
+		</script>
+
+	</body>
+
+</html>
