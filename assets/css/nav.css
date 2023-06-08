@@ -212,10 +212,9 @@ nav ul li a {
 }
 
 .sideBarNav .nav-menu .nav-item:last-child {
-	/* position: absolute;
-	bottom: 0; */
 	width: 100%;
 	margin-top: 14rem;
+	bottom: 100px;
 }
 
 .sideBarNav .nav-menu .nav-item .nav-link {
